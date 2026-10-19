@@ -218,7 +218,7 @@ class AsyncSource<T, TArgs extends Array<any> = Array<any>> {
         return cache !== null;
     }
 
-    private async setCachedData(data: T, args: Array<any>): Promise<void> {
+    public async setCachedData(data: T, args: Array<any> = []): Promise<void> {
         if (!this.cacheKey) return;
 
         try {
